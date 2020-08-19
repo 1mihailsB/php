@@ -1,6 +1,5 @@
 <?php 
 session_start();
-include 'commons/header.php' 
 ?>
 <link rel="stylesheet" href="templates/css/addProduct.css">
 
@@ -78,5 +77,4 @@ include 'commons/header.php'
 
 <?php 
 $_SESSION = array();
-include 'commons/footer.php';
 ?>

@@ -5,7 +5,7 @@ $(document).ready(function() {
 		Book: {
 			weight: { 
 				info: "Weight with decimals sparated by dot. For example: 150 or 14.01 or 1.99",
-				label: "Please provide the weight in <b>kg</b. For example: 150 or 14.01 or 1.99",
+				label: "Please provide the weight in <b>kg</b>. For example: 150 or 14.01 or 1.99",
 				pattern: "\\d{1,7}\\.\\d{1,2}|\\d{1,7}"
 			}
 		},

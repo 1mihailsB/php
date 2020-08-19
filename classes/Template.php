@@ -28,7 +28,11 @@ class Template
         
         ob_start();
 
+        include 'commons/header.php';
+
         include basename($this->template);
+
+        include 'commons/footer.php';
 
         return ob_get_clean();
     }

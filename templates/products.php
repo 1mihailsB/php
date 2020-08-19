@@ -1,7 +1,7 @@
 <?php 
 declare(strict_types = 1);
 session_start();
-include 'commons/header.php'; 
+//include 'commons/header.php';
 ?>
 
 <link rel="stylesheet" href="templates/css/products.css">
@@ -69,5 +69,5 @@ if (isset($_SESSION['sql_error'])) {
 
 <?php 
 $_SESSION = array();
-include 'commons/footer.php'; 
+//include 'commons/footer.php';
 ?>
