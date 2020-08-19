@@ -15,8 +15,12 @@ $isNameUnique = $productRepo->isNameUnique($_POST['Name']);
 
 // if SKU/name not unique - add errors to session and send back to form page
 if (!$isSkuUnique || !$isNameUnique) {
-    if (!$isSkuUnique) $_SESSION['form_error'][] = "SKU \"{$_POST['SKU']}\" is already taken";
-    if (!$isNameUnique) $_SESSION['form_error'][] = "Name \"{$_POST['Name']}\" is already taken";
+    if (!$isSkuUnique) {
+        $_SESSION['form_error'][] = "SKU \"{$_POST['SKU']}\" is already taken";
+    }
+    if (!$isNameUnique) {
+        $_SESSION['form_error'][] = "Name \"{$_POST['Name']}\" is already taken";
+    }
 
     bindPostToSession();
     exit;
