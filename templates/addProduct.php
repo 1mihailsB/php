@@ -36,12 +36,12 @@ session_start();
 
 <form id="add-form" action="create.php" method="POST" enctype="multipart/form-data" autocomplete="off">
     <div class="form-group">
-        <label for="prodectSku">SKU</label>
+        <label for="SKU">SKU</label>
         <input type="text" class="form-control" name="SKU" value="<?php echo $_SESSION['SKU']; ?>" 
             title="Max - 30" maxlength="30" placeholder="Enter SKU" required>
     </div>
     <div class="form-group">
-        <label for="productName">Name</label>
+        <label for="Name">Name</label>
         <input type="text" class="form-control" name="Name" value="<?php echo $_SESSION['Name']; ?>" 
             maxlength="100" placeholder="Enter product name" required>
     </div>
@@ -50,7 +50,7 @@ session_start();
         <input type="text" name="Price" value="<?php echo $_SESSION['Price']; ?>"
         title="a) any number less than or equal 7 digits; b) any number with less than or equal 7 digits before dot and less than or equal 2 digits after dot"
         pattern="\d{1,7}\.\d{1,2}|\d{1,7}"  class="form-control"  placeholder="Enter price" required>
-        <label  class="text-primary">price with decimals sparated by dot. For example: 150 or 14.01 or 1.99</label>
+        <label  class="text-primary">price with decimals separated by dot. For example: 150 or 14.01 or 1.99</label>
     </div>
 
     <h4>Product type </h4>
@@ -64,7 +64,7 @@ session_start();
         </select>
     </div>
 
-    <h6>Special atributes</h6>
+    <h6>Special attributes</h6>
     <hr>
 
     <div id="dynamic-group"></div>
