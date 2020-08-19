@@ -1,0 +1,36 @@
+.card-deck {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 0.25fr));
+    grid-gap: .5rem;
+}
+
+.card {
+    position: relative;
+    justify-content: center;
+}
+
+#btn-group {
+    position: absolute;
+    right: 0%;
+    top: 35px;
+}
+
+#add-button {
+    display: inline;
+
+}
+
+#delete-button {
+    display: inline;
+}
+
+.delete-checkbox {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+} 

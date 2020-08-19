@@ -1,0 +1,22 @@
+#see-all-btn {
+    position: absolute;
+    right: 0%;
+    top: 35px;
+}
+
+#type {
+    margin-top: 10px;
+}
+
+#select-container {
+    margin-bottom: 40px;
+}
+
+label::first-letter {
+    text-transform: capitalize;
+}
+
+#add-form {
+    max-width: 40%;
+    min-width: 600px;
+}
