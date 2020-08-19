@@ -13,11 +13,6 @@ class Database
     private $pdo;
 
     /**
-     * @var PDOException
-     */
-    private $error;
-
-    /**
      * @var PDOStatement
      */
     private $statement;
@@ -31,11 +26,7 @@ class Database
             PDO::ATTR_EMULATE_PREPARES => false
         );
 
-        try {
-            $this->pdo = new PDO($dsn, $this->user, $this->password, $options);
-        } catch(PDOException $e) {
-            $this->error = $e->getMessage();
-        }
+        $this->pdo = new PDO($dsn, $this->user, $this->password, $options);
     }
 
     public function query($query)
