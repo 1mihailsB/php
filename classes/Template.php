@@ -20,9 +20,8 @@ class Template
         ob_start();
 
         include 'commons/header.php';
-
+        // $params will be used inside template
         include basename($template);
-
         include 'commons/footer.php';
 
         return ob_get_clean();
