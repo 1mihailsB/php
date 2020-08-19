@@ -7,8 +7,19 @@ class Database
     private $password = DB_PASSWORD;
     private $dbname = DB_NAME;
 
+    /**
+     * @var PDO
+     */
     private $pdo;
+
+    /**
+     * @var PDOException
+     */
     private $error;
+
+    /**
+     * @var PDOStatement
+     */
     private $statement;
 
     public function __construct()

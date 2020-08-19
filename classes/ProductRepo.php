@@ -2,6 +2,9 @@
 
 class ProductRepo
 {
+    /**
+     * @var Database
+     */
     private $db;
 
     public function __construct()
@@ -65,8 +68,9 @@ class ProductRepo
 
     /**
      * @param array $ids ids of all products to delete
-     * 
+     *
      * @return void
+     * @throws Exception if $ids is empty
      */
     public function deleteAllById($ids)
     {
