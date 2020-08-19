@@ -75,7 +75,7 @@ class ProductRepo
     public function deleteAllById($ids)
     {
         if (empty($ids)) {
-            throw new Exception("Ids empty");
+            throw new \http\Exception\InvalidArgumentException("Ids empty");
         }
 
         $inArgument = implode(',', array_fill(0, count($ids), '?'));
