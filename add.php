@@ -2,6 +2,6 @@
 declare(strict_types = 1);
 include_once 'config/autoload.php';
 
-$template = new Template('templates/addProduct.php');
+$template = new Template();
 
-echo $template;
+echo $template->render('templates/addProduct.php');

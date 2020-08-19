@@ -9,7 +9,7 @@ $_SESSION['delete_attempt'] = true;
 
 $productRepo = new ProductRepo();
 
-$productData = $_POST['delete_items'];
+$productData = array_map('intval', $_POST['delete_items']);
 
 empty($productData) ? exit() : '';
 

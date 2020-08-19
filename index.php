@@ -2,12 +2,12 @@
 declare(strict_types = 1);
 include_once 'config/autoload.php';
 
-$product = new ProductRepo();
+$productRepo = new ProductRepo();
 
-$template = new Template('templates/products.php');
+$template = new Template();
 
-$template->products = $product->getAllProducts();
+$products = $productRepo->getAllProducts();
 
-echo $template;
+echo $template->render('templates/products.php', $products);
 
 

@@ -1,7 +1,6 @@
 <?php 
 declare(strict_types = 1);
 session_start();
-//include 'commons/header.php';
 ?>
 
 <link rel="stylesheet" href="templates/css/products.css">
@@ -46,19 +45,19 @@ if (isset($_SESSION['sql_error'])) {
 
 <form id="delete-products" action="delete.php" method="POST" enctype="multipart/form-data" autocomplete="off">
 <div class="card-deck">
-    <?php foreach($products as $product): ?>
+    <?php foreach($params as $param): ?>
     
         <div class="card align-items-center">
             <div class="card-body">
-                <h5 class="card-title"> <?php echo $product->sku; ?> </h5>
-                <p class="card-text"> <?php echo $product->name; ?> </p>
-                <p class="card-text"> <?php echo $product->price.' $'; ?> </p>
+                <h5 class="card-title"> <?php echo $param['sku']; ?> </h5>
+                <p class="card-text"> <?php echo $param['name']; ?> </p>
+                <p class="card-text"> <?php echo $param['price'] . ' $'; ?> </p>
                 <p class="card-text"> 
-                    <?php echo $attributeForType[$product->type][0] . ': ';  ?>
-                    <?php  echo $product->attribute . ' ' . $attributeForType[$product->type][1]; ?>
+                    <?php echo $attributeForType[$param['type']][0] . ': ';  ?>
+                    <?php  echo $param['attribute'] . ' ' . $attributeForType[$param['type']][1]; ?>
                 </p>
             </div>
-            <input class="delete-checkbox" type="checkbox" name="delete_items[]" value=<?php echo $product->id; ?>></input>
+            <input class="delete-checkbox" type="checkbox" name="delete_items[]" value=<?php echo $param['id']; ?></input>
         </div>
 
     <?php endforeach; ?>
@@ -69,5 +68,4 @@ if (isset($_SESSION['sql_error'])) {
 
 <?php 
 $_SESSION = array();
-//include 'commons/footer.php';
 ?>
