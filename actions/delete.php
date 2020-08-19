@@ -1,7 +1,11 @@
 <?php
 declare(strict_types = 1);
+// change to dir where Location file is located
+chdir(dirname(__DIR__));
 session_start();
-header('Location: '.'index.php');
+// send back to main page to inform about success/failure of product deletion
+header('Location: '.'../index.php');
+
 include_once 'config/autoload.php';
 
 //mark in session an attempt to delete items. will use to inform user about outcome

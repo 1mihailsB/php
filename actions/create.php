@@ -1,8 +1,10 @@
 <?php 
 declare(strict_types = 1);
+// change to dir where Location file located
+chdir(dirname(__DIR__));
 session_start();
 // send back to form page to inform about success/failure of product creation
-header('Location: '.'add.php');
+header('Location: '.'../add.php');
 
 include_once 'config/autoload.php';
 include_once 'templates/commons/header.php';

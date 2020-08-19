@@ -43,7 +43,7 @@ if (isset($_SESSION['sql_error'])) {
 
 ?>
 
-<form id="delete-products" action="delete.php" method="POST" enctype="multipart/form-data" autocomplete="off">
+<form id="delete-products" action="actions/delete.php" method="POST" enctype="multipart/form-data" autocomplete="off">
 <div class="card-deck">
     <?php foreach($params as $param): ?>
     

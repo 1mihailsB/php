@@ -34,7 +34,7 @@ session_start();
 ?>
 
 
-<form id="add-form" action="create.php" method="POST" enctype="multipart/form-data" autocomplete="off">
+<form id="add-form" action="actions/create.php" method="POST" enctype="multipart/form-data" autocomplete="off">
     <div class="form-group">
         <label for="SKU">SKU</label>
         <input type="text" class="form-control" name="SKU" value="<?php echo $_SESSION['SKU']; ?>" 
