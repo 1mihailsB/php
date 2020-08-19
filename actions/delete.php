@@ -15,7 +15,7 @@ $productRepo = new ProductRepo();
 
 $productData = array_map('intval', $_POST['delete_items']);
 
-empty($productData) ? exit() : '';
+if (empty($productData)) exit();
 
 try {
     //if 'deleted' is set, then items were deleted successfully
