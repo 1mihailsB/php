@@ -11,7 +11,7 @@ $(document).ready(function() {
 		},
 
 		Dvd: {
-			size :{
+			size: {
 				info: "Input whole nubmers, max 7 digits long",
 				label: "Please provide size of the CD in <b>MB</b>",
 				pattern: "\\d{1,7}"
@@ -47,7 +47,6 @@ $(document).ready(function() {
 
 			// add input fields dynamically based on selected product type
 			for (const [field, properties] of Object.entries(dynamicRules[selected])) {
-				console.log('field: ', field, ' properties: ', properties);
 
 				//create form-group (bootstrap class) for each input field
 				//and append it to form right away
