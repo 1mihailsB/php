@@ -15,6 +15,7 @@ define('CONTROLLER',  APP . 'controller' . D_S);
 
 // for use in html href/src to load js/css
 define('FRONTEND', $config['base_url'] . D_S . 'app' . D_S . 'view' . D_S . 'resources');
+
 // to use for http request url
 define('BASE_URL', $config['base_url'] . D_S);
 
