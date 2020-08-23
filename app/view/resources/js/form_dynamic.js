@@ -2,7 +2,7 @@
 $(document).ready(function() {
 
 	let dynamicRules = {
-		Book: {
+		book: {
 			weight: { 
 				info: "Weight with decimals sparated by dot. For example: 150 or 14.01 or 1.99",
 				label: "Please provide the weight in <b>kg</b>. For example: 150 or 14.01 or 1.99",
@@ -10,7 +10,7 @@ $(document).ready(function() {
 			}
 		},
 
-		Dvd: {
+		dvd: {
 			size: {
 				info: "Input whole nubmers, max 7 digits long",
 				label: "Please provide size of the CD in <b>MB</b>",
@@ -18,7 +18,7 @@ $(document).ready(function() {
 			}
 		},
 
-		Furniture: {
+		furniture: {
 			height: {
 				info: "Input whole nubmers, max 7 digits long",
 				label: "Please provide height in <b>cm</b>",
@@ -40,7 +40,7 @@ $(document).ready(function() {
 	};
 
 	let update = function(selected) {
-		if (selected === 'Book' || selected === 'Dvd' || selected === 'Furniture') {
+		if (selected === 'book' || selected === 'dvd' || selected === 'furniture') {
 
 			//if product type is changed - remove all dynamic inputs that were present before (see line 55)
 			$('div[dynamic="true"]').remove();

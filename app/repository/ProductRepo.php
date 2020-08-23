@@ -7,9 +7,12 @@ class ProductRepo
      */
     private $db;
 
-    public function __construct()
+    /**
+     * @param Database $database
+     */
+    public function __construct($database)
     {
-        $this->db = new Database();
+        $this->db = $database;
     }
 
     /**
@@ -20,6 +23,20 @@ class ProductRepo
         $this->db->query("SELECT * FROM product order by type");
     
         return $this->db->resultSet();
+
+    }
+
+    /**
+     * @return array products present in database as array of BaseProduct objects
+     */
+    public function getAllProductsObj($productFactory)
+    {
+        $this->db->query("SELECT * FROM product order by type");
+
+        $result = $this->db->resultSet();
+        $result = array_map(array($productFactory, 'createFromArray'), $result);
+
+        return $result;
     }
 
     /**
@@ -49,7 +66,7 @@ class ProductRepo
     }
 
     /**
-     * @param array $product assoc. array of all columns of product table except id.
+     * @param BaseProduct $product
      * 
      * @return void
      */
@@ -57,11 +74,11 @@ class ProductRepo
     {
         // first null value is for auto generated ID
         $this->db->query("INSERT INTO product values (null, :name, :sku, :price, :type, :attribute)");
-        $this->db->bind(':name', $product['name']);
-        $this->db->bind(':sku', $product['sku']);
-        $this->db->bind(':price', $product['price']);
-        $this->db->bind(':type', $product['type']);
-        $this->db->bind(':attribute', $product['attribute']);
+        $this->db->bind(':name', $product->getName());
+        $this->db->bind(':sku', $product->getSku());
+        $this->db->bind(':price', $product->getPrice());
+        $this->db->bind(':type', $product->getType());
+        $this->db->bind(':attribute', $product->getAttribute());
 
         $this->db->execute();
     }
