@@ -66,7 +66,7 @@ class AddController  extends BaseController
 
         $product->setSku($_POST['sku']);
         $product->setName($_POST['name']);
-        $product->setPrice($_POST['price']);
+        $product->setPrice((double) $_POST['price']);
         $product->setAttribute($_POST['attributes']);
 
         try {

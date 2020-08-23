@@ -8,7 +8,7 @@ class HomeController extends BaseController
     private $productRepo;
 
     /**
-     * @param $repository
+     * @param ProductRepo $repository
      */
     public function __construct($repository)
     {

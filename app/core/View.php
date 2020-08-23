@@ -3,8 +3,14 @@
 
 class View
 {
+    /**
+     * @var string
+     */
     protected $view;
 
+    /**
+     * @param string $view
+     */
     public function __construct($view)
     {
         $this->view = $view;

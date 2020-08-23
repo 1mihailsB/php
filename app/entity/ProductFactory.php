@@ -40,7 +40,7 @@ class ProductFactory
         $productObj->setId($product['id']);
         $productObj->setSku($product['sku']);
         $productObj->setName($product['name']);
-        $productObj->setPrice($product['price']);
+        $productObj->setPrice((double) $product['price']);
         $productObj->setAttribute($product['attribute'], false);
 
         return $productObj;

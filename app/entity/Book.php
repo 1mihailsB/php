@@ -13,11 +13,13 @@ class Book extends BaseProduct
      */
     public function setAttribute($attributes, $validate = true)
     {
-        // not very useful for Book/Dvd but has some value for Furniture case.
+        // from the add-rpoduct form attribute comes in form of array, from database in form of string.
         if ($validate && !count($attributes) === 1) {
             throw new InvalidArgumentException('Invalid attributes for Book');
+        } elseif ($validate) {
+            $this->attribute = $attributes[0];
+        } else {
+            $this->attribute = $attributes;
         }
-
-        $this->attribute = $attributes[0];
     }
 }

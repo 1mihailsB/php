@@ -3,15 +3,39 @@
 
 abstract class BaseProduct
 {
+    /**
+     * @var int|null
+     */
+
     protected $id;
+
+    /**
+     * @var string
+     */
     protected $sku;
+
+    /**
+     * @var string
+     */
     protected $name;
+
+    /**
+     * @var double
+     */
     protected $price;
+
+    /**
+     * @var string
+     */
     protected $type;
+
+    /**
+     * @var string
+     */
     protected $attribute;
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getType()
     {
@@ -19,7 +43,7 @@ abstract class BaseProduct
     }
 
     /**
-     * @return mixed
+     * @return int|null
      */
     public function getId()
     {
@@ -27,7 +51,7 @@ abstract class BaseProduct
     }
 
     /**
-     * @param mixed $id
+     * @param int $id
      */
     public function setId($id)
     {
@@ -35,7 +59,7 @@ abstract class BaseProduct
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getSku()
     {
@@ -43,7 +67,7 @@ abstract class BaseProduct
     }
 
     /**
-     * @param mixed $sku
+     * @param string $sku
      */
     public function setSku($sku)
     {
@@ -51,7 +75,7 @@ abstract class BaseProduct
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getName()
     {
@@ -59,7 +83,7 @@ abstract class BaseProduct
     }
 
     /**
-     * @param mixed $name
+     * @param string $name
      */
     public function setName($name)
     {
@@ -67,7 +91,7 @@ abstract class BaseProduct
     }
 
     /**
-     * @return mixed
+     * @return double
      */
     public function getPrice()
     {
@@ -75,7 +99,7 @@ abstract class BaseProduct
     }
 
     /**
-     * @param mixed $price
+     * @param double $price
      */
     public function setPrice($price)
     {
@@ -83,7 +107,7 @@ abstract class BaseProduct
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getAttribute()
     {
@@ -91,7 +115,7 @@ abstract class BaseProduct
     }
 
     /**
-     * @param mixed $attribute
+     * @param string $attribute
      * @param bool $validate default value true is used when trying to set attribute received from add-product form
      * but when inserting values from database into Furniture object, this value should be set to false to prevent
      * validation. In my solution this is useful because from the add-product form the incoming attribute values are in
