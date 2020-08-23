@@ -92,11 +92,11 @@ abstract class BaseProduct
 
     /**
      * @param mixed $attribute
-     * @param bool $validate default velue true is used when trying to set attribute received from add-product form
+     * @param bool $validate default value true is used when trying to set attribute received from add-product form
      * but when inserting values from database into Furniture object, this value should be set to false to prevent
-     * validation. In my solution this is useful because from the add-product form the incoming values are in format of
-     * [int, int, int] but in database they are stored as "10x10x10". In real project possibly more tables for product
-     * type, attribute type/format would be created.
+     * validation. In my solution this is useful because from the add-product form the incoming attribute values are in
+     * format of [int, int, int] but in database they are stored as "10x10x10". In real project possibly more tables for
+     * product type, attribute type/format would be created to make it all nice and organized.
      */
     abstract public function setAttribute($attribute, $validate = true);
 
