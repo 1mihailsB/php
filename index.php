@@ -1,6 +1,5 @@
 <?php 
 declare(strict_types = 1);
-//include_once 'config/autoload.php';
 include_once 'config.php';
 
 // for includes/autoloading
